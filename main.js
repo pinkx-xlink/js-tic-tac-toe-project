@@ -1,3 +1,3 @@
 const Gameboard = {
-    const gameboard = ['testing'];
+   gameboard: [1, 2, 3],
 }
