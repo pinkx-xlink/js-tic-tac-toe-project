@@ -1,5 +1,7 @@
-const Gameboard = {
-   gameboard: [1, 2, 3],
+function Gameboard() {
+   const rows = 3;
+   const columns = 3;
+   const gameboard = [];
 }
 
 console.log(Gameboard);
