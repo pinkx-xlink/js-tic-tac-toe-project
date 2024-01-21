@@ -1,0 +1,14 @@
+grid array: 
+
+const lengthX = 5;
+const lengthY = 2;
+const map = Array.from({ length: lengthX }, (_, colIndex) => (
+  Array.from({ length: lengthY }, (_, rowIndex) => (
+    // some element to put in each, for example
+    { foo: 'bar'}
+  ))
+));
+console.log(map);
+
+
+

@@ -1,5 +1,5 @@
 // create a 3 x 3 grid in console.
-function Gameboard(rowCount, columnCount) {
+function Gameboard (rowCount, columnCount) {
   const rows = 3;
   const columns = 3;
   const gameboard = [];
@@ -29,7 +29,7 @@ function Gameboard(rowCount, columnCount) {
   console.log(format(rotate(grid)));
 }
 
-window.onload = function() {
+window.onload = function () {
   Gameboard();
 }
 
