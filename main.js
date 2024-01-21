@@ -2,7 +2,7 @@
 function Gameboard () {
   const rows = 3;
   const columns = 3;
-  const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"-"));
+  const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
 
   const rotate = gameboard => 
     gameboard[0].map(
