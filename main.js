@@ -3,7 +3,7 @@ function Gameboard(rowCount, columnCount) {
    const rows = 3;
    const columns = 3;
    const gameboard = [];
-   const grid = Array.from(new Array(5),()=>Array.from(new Array(5),()=>"-"));
+   const grid = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"-"));
 
 const rotate = grid => 
   grid[0].map(
@@ -15,7 +15,7 @@ const rotate = grid =>
   );
 const format = grid => grid.map(x=>x.join(" ")).join("\n");
 //set some values of grid
-[[0,2],[1,2],[2,2],[3,2],[4,2]].forEach(
+[[0,2],[1,2],[2,2]].forEach(
   ([x,y])=>grid[x][y]="X"
 );
 
