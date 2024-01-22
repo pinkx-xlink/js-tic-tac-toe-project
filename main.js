@@ -26,6 +26,9 @@ function Gameboard () {
   //you can rotate the grid to build each row and then each column like html table
   console.log("map grid rows first:")
   console.log(format(rotate(gameboard)));
+  
+  gameboard.splice(1, 1, 'W');
+  console.log(format(rotate(gameboard)));
 }
 
 window.onload = function () {
@@ -37,10 +40,14 @@ const playerOne = 'X';
 const playerTwo = 'O';
 let currentPlayer = playerOne;
 
+// let each player select a spot for their marker each turn.
+function setMarker([x,y]) {
+
+};
 
 // alternate player turns.
 
-// let each player select a spot for their marker each turn.
+
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
