@@ -4,6 +4,13 @@ function Gameboard () {
   const columns = 3;
   let marker;
   const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
+
+   // let each player select a spot for their marker each turn.
+   function setMarker([x], [y]) {
+      gameboard.splice(x, y, 'W');
+      return gameboard;
+   };
+
   const rotate = gameboard => 
     gameboard[0].map(
       (_,y)=>gameboard.map(
@@ -34,7 +41,6 @@ function Gameboard () {
 
 window.onload = function () {
   Gameboard();
-  
 }
 
 // create player1 and player 2.
@@ -44,11 +50,7 @@ let currentPlayer = playerOne;
 
 
 
- // let each player select a spot for their marker each turn.
-//  function setMarker([x, y]) {
-//    gameboard.splice(x, y, 'W');
-//    console.log(format(rotate(gameboard)));
-//  };
+
 
 // alternate player turns.
 

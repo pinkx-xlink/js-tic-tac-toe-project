@@ -15,3 +15,10 @@ marker = function setMarker([x, y]) {
    gameboard.splice(x, y, '5');
   console.log(format(rotate(gameboard)));
 };
+
+
+
+this works for changing an empty slot in the console manually:
+ gameboard.splice(1, 1, 'W');
+  console.log(format(rotate(gameboard)));
+
