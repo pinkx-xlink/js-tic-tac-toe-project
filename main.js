@@ -3,7 +3,6 @@ function Gameboard () {
   const rows = 3;
   const columns = 3;
   const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
-
   const rotate = gameboard => 
     gameboard[0].map(
       (_,y)=>gameboard.map(
@@ -26,13 +25,18 @@ function Gameboard () {
   //you can rotate the grid to build each row and then each column like html table
   console.log("map grid rows first:")
   console.log(format(rotate(gameboard)));
-  
+
   gameboard.splice(1, 1, 'W');
   console.log(format(rotate(gameboard)));
+  
 }
 
 window.onload = function () {
   Gameboard();
+   
+  const marker = function setMarker([x, y]) {
+   
+   };
 }
 
 // create player1 and player 2.
@@ -40,10 +44,11 @@ const playerOne = 'X';
 const playerTwo = 'O';
 let currentPlayer = playerOne;
 
-// let each player select a spot for their marker each turn.
-function setMarker([x,y]) {
-
-};
+ // let each player select a spot for their marker each turn.
+//  function setMarker([x, y]) {
+//    gameboard.splice(x, y, 'W');
+//    console.log(format(rotate(gameboard)));
+//  };
 
 // alternate player turns.
 
