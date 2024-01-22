@@ -1,5 +1,4 @@
-grid array: 
-
+making a grid array: 
 const lengthX = 5;
 const lengthY = 2;
 const map = Array.from({ length: lengthX }, (_, colIndex) => (
@@ -11,4 +10,8 @@ const map = Array.from({ length: lengthX }, (_, colIndex) => (
 console.log(map);
 
 
-
+trying to replace an "emply" spot with an example marker of 5:
+marker = function setMarker([x, y]) {
+   gameboard.splice(x, y, '5');
+  console.log(format(rotate(gameboard)));
+};
