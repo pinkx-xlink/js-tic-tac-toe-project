@@ -51,9 +51,8 @@ function setPlayer() {
 
 // let each player select a spot for their marker each turn.
 function setMarker(Gameboard) {
-   return {
-      gameboard.shift(1, 1, 'W');
-   };
+   gameboard.shift(x, y, 'W');
+   return ;
 };
 
 
