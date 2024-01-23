@@ -78,10 +78,16 @@ function setMarker(xCoord, yCoord) {
     );
     const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
+  
    [[xCoord], [yCoord]].forEach(
      (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
    );
   console.log(format(updateGameboard));
+  return format(updateGameboard);
+
+  function storeMarker() {
+   
+  }
 }
 // call in the console with setMarker(0, 0)
 
