@@ -1,3 +1,5 @@
+
+
 // create a 3 x 3 grid in console.
 function Gameboard () {
   const rows = 3;
@@ -14,6 +16,7 @@ function Gameboard () {
       row=>row.map(([x,y])=>gameboard[y][x])
     );
   const format = gameboard => gameboard.map(x=>x.join(" ")).join("\n");
+  
   console.log(format(gameboard));
 }
 
@@ -46,7 +49,9 @@ const playerTwoMarker = 'O';
 let currentMarker = 'X';
 function setMarker(x, y) {
    const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
-
+   let tile;
+  tile = x.toString() + "-" + y.toString();
+  console.log(tile);
   const rotate = updateGameboard => 
     updateGameboard[0].map(
       (_,y)=>updateGameboard.map(
@@ -61,13 +66,14 @@ function setMarker(x, y) {
      (x, y)=>updateGameboard[x][y]=currentMarker
    );
    setPlayer();
-
-  //you can map the grid to columns first, it'll look like it's rotated
-  //  unless you generate the columns in div float lefts
   console.log(format(updateGameboard));
 }
 // call in the console! for ex:
 // setMarker(0, 0)
+
+function setCoordinates(x, y) {
+
+}
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
