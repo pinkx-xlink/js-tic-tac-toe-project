@@ -7,7 +7,7 @@ function Gameboard () {
 
    // let each player select a spot for their marker each turn.
    function setMarker([x], [y]) {
-      gameboard.splice(x, y, 'W');
+      gameboard.shift(x, y, 'W');
       return gameboard;
    };
 
@@ -33,10 +33,6 @@ function Gameboard () {
   //you can rotate the grid to build each row and then each column like html table
   console.log("map grid rows first:")
   console.log(format(rotate(gameboard)));
-
-  gameboard.splice(1, 0, 'W');
-  console.log(format(rotate(gameboard)));
-  
 }
 
 window.onload = function () {
@@ -58,8 +54,6 @@ function setPlayer() {
       console.log(`Player One's turn. Marker: X`);
    }
 }
-
-
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
