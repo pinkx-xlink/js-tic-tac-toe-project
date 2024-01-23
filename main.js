@@ -51,6 +51,7 @@ function setMarker(x, y) {
    const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
    // setCoords code
    setCoordinates(x, y);
+   
   const rotate = updateGameboard => 
     updateGameboard[0].map(
       (_,y)=>updateGameboard.map(
@@ -59,6 +60,7 @@ function setMarker(x, y) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
+    
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
   //set some values of grid
    [x, y].forEach(
@@ -74,6 +76,11 @@ function setCoordinates(x, y) {
    let tile;
    tile = x.toString() + "-" + y.toString();
    console.log(`coords: ${tile}`);
+
+   let coords = this.id.split("-");
+   x = parseInt(coords[0]);
+   y = parseFloat(coords[1]);
+   console.log(coords);
 };
 
 // when a player choses a spot, push X/O and
