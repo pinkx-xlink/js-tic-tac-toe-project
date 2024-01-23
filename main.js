@@ -60,6 +60,7 @@ function setMarker(x, y) {
   // );
   setPlayer();
   console.log(format(updateGameboard));
+  
 }
 // call in the console with setMarker(0, 0)
 
@@ -72,7 +73,7 @@ const setTile = function(x, y) {
     x = parseInt(coords[0]);
     y = parseFloat(coords[1]);
     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-    
+    return coords;
   }
   setCoordinates();
 };
