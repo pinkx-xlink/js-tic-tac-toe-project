@@ -5,12 +5,6 @@ function Gameboard () {
   let marker;
   const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
 
-   // let each player select a spot for their marker each turn.
-   function setMarker([x], [y]) {
-      gameboard.shift(x, y, 'W');
-      return gameboard;
-   };
-
   const rotate = gameboard => 
     gameboard[0].map(
       (_,y)=>gameboard.map(
@@ -54,6 +48,13 @@ function setPlayer() {
       console.log(`Player One's turn. Marker: X`);
    }
 }
+
+// let each player select a spot for their marker each turn.
+function setMarker([x], [y]) {
+   gameboard.shift(x, y, 'W');
+   return gameboard;
+};
+
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
