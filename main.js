@@ -50,7 +50,9 @@ const setTile = function(xCoord, yCoord) {
      xCoord = parseInt(coords[0]);
      yCoord = parseFloat(coords[1]);
      console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-     return coords;
+     return {
+      coords
+     }
    }
    setCoordinates();
    setPlayer();
@@ -76,8 +78,8 @@ function setMarker(xCoord, yCoord) {
     );
     const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
-   [xCoord, yCoord].forEach(
-     (x, y)=>updateGameboard[x][y]=currentMarker
+   [[xCoord], [yCoord]].forEach(
+     (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
    );
   console.log(format(updateGameboard));
 }
