@@ -86,11 +86,11 @@ function setMarker(xCoord, yCoord) {
 
   function storeMarker(tile) {
    if (xCoord != "" && yCoord != "") {
-      tile.innerText = currentMarker;
       console.log('spot taken');
+      return;
    } else {
-      this.innerText = " ";
-      console.log('spot not taken')
+      console.log('spot not taken');
+      tile = currentMarker;
    }
   }
   storeMarker();
