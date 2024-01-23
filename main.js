@@ -38,14 +38,19 @@ let currentPlayer = playerOne;
 function setPlayer() {
    if (currentPlayer == playerOne) {
       currentPlayer = playerTwo;
+      currentMarker = playerTwoMarker
       console.log('Player Twos turn. Marker: O');
    } else if (currentPlayer == playerTwo) {
       currentPlayer = playerOne;
+      currentMarker = playerOneMarker;
       console.log(`Player One's turn. Marker: X`);
    }
 }
 
 //let player place a marker 
+const playerOneMarker = 'X';
+const playerTwoMarker = 'O';
+let currentMarker = 'X';
 function setMarker(x, y) {
    const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
 
@@ -60,7 +65,7 @@ function setMarker(x, y) {
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
   //set some values of grid
    [x, y].forEach(
-     (x, y)=>updateGameboard[x][y]="X"
+     (x, y)=>updateGameboard[x][y]=currentMarker
    );
    setPlayer();
 
