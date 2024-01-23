@@ -37,6 +37,20 @@ function setPlayer() {
   }
 }
 
+const setTile = function(x, y) {
+   let tile;
+   tile = x.toString() + "-" + y.toString();
+   console.log(`coords: ${tile}`);
+   function setCoordinates() {
+     let coords = tile.split("-");
+     x = parseInt(coords[0]);
+     y = parseFloat(coords[1]);
+     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
+     return coords;
+   }
+   setCoordinates();
+ };
+
 // let player place a marker 
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
@@ -64,19 +78,6 @@ function setMarker(x, y) {
 }
 // call in the console with setMarker(0, 0)
 
-const setTile = function(x, y) {
-  let tile;
-  tile = x.toString() + "-" + y.toString();
-  console.log(`coords: ${tile}`);
-  function setCoordinates() {
-    let coords = tile.split("-");
-    x = parseInt(coords[0]);
-    y = parseFloat(coords[1]);
-    console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-    return coords;
-  }
-  setCoordinates();
-};
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
