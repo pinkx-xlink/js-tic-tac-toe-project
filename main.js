@@ -13,7 +13,6 @@ function Gameboard () {
       row=>row.map(([x,y])=>gameboard[y][x])
     );
   const format = gameboard => gameboard.map(x=>x.join(" ")).join("\n");
-  
   console.log(format(gameboard));
 }
 window.onload = function () {
@@ -38,7 +37,7 @@ function setPlayer() {
   }
 }
 
-//let player place a marker 
+// let player place a marker 
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
@@ -55,7 +54,7 @@ function setMarker(x, y) {
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
-  //set some values of grid
+  // set some values of grid
   // [x, y].forEach(
   //   (x, y)=>updateGameboard[x][y]=currentMarker
   // );
@@ -73,6 +72,12 @@ const setTile = function(x, y) {
     x = parseInt(coords[0]);
     y = parseFloat(coords[1]);
     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
+    const placeMarker = () => {
+      ([x][y]).value = coords;
+    }
+    return {
+      placeMarker
+    };
   }
   setCoordinates(tile);
 };
