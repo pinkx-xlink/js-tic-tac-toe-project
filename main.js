@@ -67,7 +67,6 @@ function setMarker(x, y) {
      (x, y)=>updateGameboard[x][y]=currentMarker
    );
    setPlayer();
-  setCoordinates(setTile);
   console.log(format(updateGameboard));
 }
 // call in the console! for ex:
@@ -77,13 +76,15 @@ const setTile = function(x, y) {
    let tile;
    tile = x.toString() + "-" + y.toString();
    console.log(`coords: ${tile}`);
+   function setCoordinates() {
+      let coords = tile.split("-");
+      x = parseInt(coords[0]);
+      y = parseFloat(coords[1]);
+      console.log(coords);
+   }
+   setCoordinates();
 };
-function setCoordinates(setTile) {
-   let coords = this.id.split('-');
-   x = parseInt(coords[0]);
-   y = parseFloat(coords[1]);
-   console.log(coords);
-}
+
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
