@@ -53,7 +53,15 @@ let currentPlayer = playerOne;
 
 
 // alternate player turns.
-
+function setPlayer() {
+   if (currentPlayer == playerOne) {
+      currentPlayer = playerTwo;
+      console.log('Player Twos turn.');
+   } else {
+      console.log(`Player One's turn.`);
+   }
+}
+setPlayer();
 
 
 // when a player choses a spot, push X/O and
