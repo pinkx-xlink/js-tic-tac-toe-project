@@ -34,13 +34,14 @@ function Gameboard () {
   console.log("map grid rows first:")
   console.log(format(rotate(gameboard)));
 
-  gameboard.splice(1, 1, 'W');
+  gameboard.splice(1, 0, 'W');
   console.log(format(rotate(gameboard)));
   
 }
 
 window.onload = function () {
   Gameboard();
+  setPlayer();
 }
 
 // create player1 and player 2.
@@ -48,20 +49,16 @@ const playerOne = 'X';
 const playerTwo = 'O';
 let currentPlayer = playerOne;
 
-
-
-
-
 // alternate player turns.
 function setPlayer() {
    if (currentPlayer == playerOne) {
       currentPlayer = playerTwo;
-      console.log('Player Twos turn.');
+      console.log('Player Twos turn. Marker: O');
    } else {
-      console.log(`Player One's turn.`);
+      console.log(`Player One's turn. Marker: X`);
    }
 }
-setPlayer();
+
 
 
 // when a player choses a spot, push X/O and
