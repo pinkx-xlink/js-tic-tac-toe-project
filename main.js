@@ -67,19 +67,21 @@ const setTile = function(x, y) {
   let tile;
   tile = x.toString() + "-" + y.toString();
   console.log(`coords: ${tile}`);
-  function setCoordinates(tile) {
+  function setCoordinates() {
     let coords = tile.split("-");
     x = parseInt(coords[0]);
     y = parseFloat(coords[1]);
     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-    const placeMarker = () => {
-      ([x][y]).value = coords;
+    const placeMarker = (coords) => {
+      tile.value = coords;
     }
     return {
+      tile,
+      coords,
       placeMarker
     };
   }
-  setCoordinates(tile);
+  setCoordinates();
 };
 
 // when a player choses a spot, push X/O and
