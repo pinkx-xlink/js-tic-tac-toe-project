@@ -74,7 +74,7 @@ function setMarker(xCoord, yCoord) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
-    const format = updateGameboard => updateGameboard.map(x=>updateGameboard.join(" ")).join("\n");
+    const format = updateGameboard => updateGameboard.splice(x=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
   // [x, y].forEach(
   //   (x, y)=>updateGameboard[x][y]=currentMarker
