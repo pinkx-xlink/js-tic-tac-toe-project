@@ -63,7 +63,7 @@ let currentMarker = 'X';
 function setMarker(xCoord, yCoord) {
   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   setTile(xCoord, yCoord);
-    updateGameboard.splice(xCoord, yCoord, 'x');
+    updateGameboard.push('xCoord', 'yCoord', 'x');
     console.log('add an x');
   // setCoords code
   const rotate = updateGameboard => 
