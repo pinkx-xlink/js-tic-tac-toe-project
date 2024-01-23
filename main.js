@@ -37,14 +37,14 @@ function setPlayer() {
   }
 }
 
-const setTile = function(x, y) {
+const setTile = function(xCoord, yCoord) {
    let tile;
-   tile = x.toString() + "-" + y.toString();
+   tile = xCoord.toString() + "-" + yCoord.toString();
    console.log(`coords: ${tile}`);
    function setCoordinates() {
      let coords = tile.split("-");
-     x = parseInt(coords[0]);
-     y = parseFloat(coords[1]);
+     xCoord = parseInt(coords[0]);
+     yCoord = parseFloat(coords[1]);
      console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
      return coords;
    }
@@ -56,8 +56,11 @@ const setTile = function(x, y) {
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
-function setMarker(x, y) {
-  const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
+function setMarker(xCoord, yCoord) {
+  updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
+  setTile(xCoord, yCoord);
+    updateGameboard.splice(0, 0, 'x');
+    console.log('add an x');
   // setCoords code
   const rotate = updateGameboard => 
     updateGameboard[0].map(
@@ -67,14 +70,14 @@ function setMarker(x, y) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
-    setTile(x, y);
-   gameboard.splice(x, y, 'w');
-  const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
+    const format = updateGameboard => updateGameboard.map(xCoord=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
   // [x, y].forEach(
   //   (x, y)=>updateGameboard[x][y]=currentMarker
   // );
   console.log(format(updateGameboard));
+    
+  
   
 }
 // call in the console with setMarker(0, 0)
