@@ -69,7 +69,7 @@ function setMarker(x, y) {
   console.log(format(updateGameboard));
 }
 // call in the console! for ex:
-// setMarker
+// setMarker(0, 0)
 
 // can change currentPlayer manually in console using
 // currentPlayer = playerOne // this logs the player's marker: 'O'
