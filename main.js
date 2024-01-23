@@ -63,9 +63,9 @@ function setMarker(x, y) {
     
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
   //set some values of grid
-   [x, y].forEach(
-     (x, y)=>updateGameboard[x][y]=currentMarker
-   );
+   // [x, y].forEach(
+   //   (x, y)=>updateGameboard[x][y]=currentMarker
+   // );
    setPlayer();
   console.log(format(updateGameboard));
 }
