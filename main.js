@@ -35,11 +35,12 @@ const playerTwo = 'O';
 let currentPlayer = playerOne;
 
 // alternate player turns.
-function setPlayer(playerOne, playerTwo) {
+function setPlayer() {
    if (currentPlayer == playerOne) {
       currentPlayer = playerTwo;
       console.log('Player Twos turn. Marker: O');
-   } else {
+   } else if (currentPlayer == playerTwo) {
+      currentPlayer = playerOne;
       console.log(`Player One's turn. Marker: X`);
    }
 }
@@ -61,11 +62,14 @@ function setMarker(x, y) {
    [x, y].forEach(
      (x, y)=>updateGameboard[x][y]="X"
    );
+   setPlayer();
 
   //you can map the grid to columns first, it'll look like it's rotated
   //  unless you generate the columns in div float lefts
   console.log(format(updateGameboard));
 }
+// call in the console! for ex:
+// setMarker
 
 // can change currentPlayer manually in console using
 // currentPlayer = playerOne // this logs the player's marker: 'O'
