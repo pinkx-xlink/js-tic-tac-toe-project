@@ -14,15 +14,6 @@ function Gameboard () {
       row=>row.map(([x,y])=>gameboard[y][x])
     );
   const format = gameboard => gameboard.map(x=>x.join(" ")).join("\n");
-
-  
-  //set some values of grid
-//   [[0,2],[1,2],[2,2]].forEach(
-//     ([x,y])=>gameboard[x][y]="X"
-//   );
-
-  //you can map the grid to columns first, it'll look like it's rotated
-  //  unless you generate the columns in div float lefts
   console.log(format(gameboard));
 }
 
