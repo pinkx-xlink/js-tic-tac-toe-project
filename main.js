@@ -14,6 +14,31 @@ function Gameboard () {
     );
   const format = gameboard => gameboard.map(x=>x.join(" ")).join("\n");
   console.log(format(gameboard));
+
+
+  function setMarker(xCoord, yCoord) {
+   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
+   setTile(xCoord, yCoord);
+     updateGameboard.splice(0, 0, 'x');
+     console.log('add an x');
+   // setCoords code
+   const rotate = updateGameboard => 
+     updateGameboard[0].map(
+       (_,y)=>updateGameboard.map(
+         (_,x)=>[y,x]
+       )
+     ).map(
+       row=>row.map(([x,y])=>updateGameboard[y][x])
+     );
+     const format = updateGameboard => updateGameboard.map(x=>updateGameboard.join(" ")).join("\n");
+   // set some values of grid
+   // [x, y].forEach(
+   //   (x, y)=>updateGameboard[x][y]=currentMarker
+   // );
+   console.log(format(updateGameboard));
+ }
+ // call in the console with setMarker(0, 0)
+
 }
 window.onload = function () {
   Gameboard();
@@ -56,31 +81,7 @@ const setTile = function(xCoord, yCoord) {
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
-function setMarker(xCoord, yCoord) {
-  updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
-  setTile(xCoord, yCoord);
-    updateGameboard.splice(0, 0, 'x');
-    console.log('add an x');
-  // setCoords code
-  const rotate = updateGameboard => 
-    updateGameboard[0].map(
-      (_,y)=>updateGameboard.map(
-        (_,x)=>[y,x]
-      )
-    ).map(
-      row=>row.map(([x,y])=>updateGameboard[y][x])
-    );
-    const format = updateGameboard => updateGameboard.map(xCoord=>updateGameboard.join(" ")).join("\n");
-  // set some values of grid
-  // [x, y].forEach(
-  //   (x, y)=>updateGameboard[x][y]=currentMarker
-  // );
-  console.log(format(updateGameboard));
-    
-  
-  
-}
-// call in the console with setMarker(0, 0)
+
 
 
 // when a player choses a spot, push X/O and
