@@ -43,16 +43,33 @@ function setPlayer(playerOne, playerTwo) {
       console.log(`Player One's turn. Marker: X`);
    }
 }
+
+//let player place a marker 
+function setMarker(x, y) {
+   const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
+
+  const rotate = updateGameboard => 
+    updateGameboard[0].map(
+      (_,y)=>updateGameboard.map(
+        (_,x)=>[y,x]
+      )
+    ).map(
+      row=>row.map(([x,y])=>updateGameboard[y][x])
+    );
+  const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
+  //set some values of grid
+   [x, y].forEach(
+     (x, y)=>updateGameboard[x][y]="X"
+   );
+
+  //you can map the grid to columns first, it'll look like it's rotated
+  //  unless you generate the columns in div float lefts
+  console.log(format(updateGameboard));
+}
+
 // can change currentPlayer manually in console using
 // currentPlayer = playerOne // this logs the player's marker: 'O'
 // or currentPlayer = playerTwo // logs: 'X'
-
-// let each player select a spot for their marker each turn.
-function setMarker(Gameboard) {
-   gameboard.shift(x, y, 'W');
-   return ;
-};
-
 
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
