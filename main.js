@@ -67,21 +67,19 @@ function setMarker(x, y) {
      (x, y)=>updateGameboard[x][y]=currentMarker
    );
    setPlayer();
-   
-  setCoordinates();
-
+  setCoordinates(setTile);
   console.log(format(updateGameboard));
 }
 // call in the console! for ex:
 // setMarker(0, 0)
 
-function setTile(x, y) {
+const setTile = function(x, y) {
    let tile;
    tile = x.toString() + "-" + y.toString();
    console.log(`coords: ${tile}`);
 };
-function setCoordinates(tile) {
-   let coords = this.id.split("-");
+function setCoordinates(setTile) {
+   let coords = this.id.split('-');
    x = parseInt(coords[0]);
    y = parseFloat(coords[1]);
    console.log(coords);
