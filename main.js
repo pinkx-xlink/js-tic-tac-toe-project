@@ -49,6 +49,7 @@ const setTile = function(x, y) {
      return coords;
    }
    setCoordinates();
+   setPlayer();
  };
 
 // let player place a marker 
