@@ -72,14 +72,7 @@ const setTile = function(x, y) {
     x = parseInt(coords[0]);
     y = parseFloat(coords[1]);
     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-    const placeMarker = (coords) => {
-      tile.value = coords;
-    }
-    return {
-      tile,
-      coords,
-      placeMarker
-    };
+    
   }
   setCoordinates();
 };
