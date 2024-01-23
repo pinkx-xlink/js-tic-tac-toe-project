@@ -83,11 +83,16 @@ function setMarker(xCoord, yCoord) {
      (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
    );
   console.log(format(updateGameboard));
-  return format(updateGameboard);
-
   function storeMarker() {
-   
+   if ([xCoord], [yCoord] != " ") {
+      this.innerText = currentMarker;
+      console.log('hi');
+   } else {
+      this.innerText = " ";
+   }
   }
+  storeMarker();
+  return format(updateGameboard);
 }
 // call in the console with setMarker(0, 0)
 
