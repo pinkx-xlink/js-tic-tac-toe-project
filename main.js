@@ -58,7 +58,6 @@ let currentMarker = 'X';
 function setMarker(x, y) {
   const updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   // setCoords code
-  setTile(x, y);
   const rotate = updateGameboard => 
     updateGameboard[0].map(
       (_,y)=>updateGameboard.map(
@@ -67,6 +66,8 @@ function setMarker(x, y) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
+    setTile(x, y);
+   updateGameboard.push(setTile(x, y));
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
   // set some values of grid
   // [x, y].forEach(
