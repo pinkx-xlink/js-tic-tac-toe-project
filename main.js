@@ -67,13 +67,12 @@ function setMarker(x, y) {
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
     setTile(x, y);
-   updateGameboard.push(setTile(x, y));
+   gameboard.splice(x, y, 'w');
   const format = updateGameboard => updateGameboard.map(x=>x.join(" ")).join("\n");
   // set some values of grid
   // [x, y].forEach(
   //   (x, y)=>updateGameboard[x][y]=currentMarker
   // );
-  setPlayer();
   console.log(format(updateGameboard));
   
 }
