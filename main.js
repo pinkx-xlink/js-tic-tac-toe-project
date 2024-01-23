@@ -76,10 +76,6 @@ function setMarker(x, y) {
 // call in the console! for ex:
 // setMarker(0, 0)
 
-// can change currentPlayer manually in console using
-// currentPlayer = playerOne // this logs the player's marker: 'O'
-// or currentPlayer = playerTwo // logs: 'X'
-
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
 
