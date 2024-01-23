@@ -35,7 +35,7 @@ const playerTwo = 'O';
 let currentPlayer = playerOne;
 
 // alternate player turns.
-function setPlayer() {
+function setPlayer(playerOne, playerTwo) {
    if (currentPlayer == playerOne) {
       currentPlayer = playerTwo;
       console.log('Player Twos turn. Marker: O');
@@ -43,6 +43,9 @@ function setPlayer() {
       console.log(`Player One's turn. Marker: X`);
    }
 }
+// can change currentPlayer manually in console using
+// currentPlayer = playerOne // this logs the player's marker: 'O'
+// or currentPlayer = playerTwo // logs: 'X'
 
 // let each player select a spot for their marker each turn.
 function setMarker(Gameboard) {
