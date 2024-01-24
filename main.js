@@ -87,13 +87,10 @@ function setMarker(xCoord, yCoord) {
   
 
   function storeMarker(tile) {
-   let currentTile = this.tile;
    if (xCoord != "" && yCoord != "") {
-      
       console.log('spot taken');
    } else {
       console.log('spot not taken');
-      currentTile = currentMarker;
       updateGameboard.push(tile);
      // tile = currentMarker;
      return
