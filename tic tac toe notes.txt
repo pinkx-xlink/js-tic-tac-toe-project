@@ -24,3 +24,19 @@ this works for changing an empty slot in the console manually:
 
 let coords;
       coords.id = x.toString() + "-" + y.toString();
+
+
+
+
+setMarker(0, 0)
+setMarker(1 ,1)
+setMarker(2, 2)
+
+
+
+
+
+
+
+
+
