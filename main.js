@@ -84,16 +84,18 @@ function setMarker(xCoord, yCoord) {
    );
   console.log(format(updateGameboard));
   
-  
-
+  let tileStatus;
+  const spotTaken = 'Taken spot';
+  const spotEmpty= 'Empty spot'; 
   function storeMarker(tile) {
    if (xCoord != "" && yCoord != "") {
+      tileStatus = spotTaken;
       console.log('spot taken');
    } else {
+      tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
      // tile = currentMarker;
-     return
    }
   }
   storeMarker();
