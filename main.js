@@ -52,19 +52,21 @@ function setMarker(xCoord, yCoord) {
       let tile;
       tile = xCoord.toString() + "-" + yCoord.toString();
       console.log(`coords: ${tile}`);
-      function setCoordinates() {
+      function setCoordinates(tile) {
         let coords = tile.split("-");
         xCoord = parseInt(coords[0]);
         yCoord = parseFloat(coords[1]);
         console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
+        [xCoord, yCoord].push('x')
         return {
           coords
         }
+        // spot taken logs when setMarker(1, 1) is return, but not for other locations
       }
-      setCoordinates();
+      setCoordinates(tile);
       setPlayer();
     };
-    
+
   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   setTile(xCoord, yCoord);
   console.log('add an x');
