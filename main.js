@@ -83,6 +83,8 @@ function setMarker(xCoord, yCoord) {
      (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
    );
   console.log(format(updateGameboard));
+  
+  
 
   function storeMarker(tile) {
    if (xCoord != "" && yCoord != "") {
@@ -90,11 +92,12 @@ function setMarker(xCoord, yCoord) {
       return;
    } else {
       console.log('spot not taken');
-      tile = currentMarker;
+      updateGameboard.push(tile);
+     // tile = currentMarker;
    }
   }
   storeMarker();
-
+  
   return format(updateGameboard);
 }
 // call in the console with setMarker(0, 0)
