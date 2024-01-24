@@ -41,28 +41,30 @@ function setPlayer() {
   }
 }
 
-const setTile = function(xCoord, yCoord) {
-  let tile;
-  tile = xCoord.toString() + "-" + yCoord.toString();
-  console.log(`coords: ${tile}`);
-  function setCoordinates() {
-    let coords = tile.split("-");
-    xCoord = parseInt(coords[0]);
-    yCoord = parseFloat(coords[1]);
-    console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-    return {
-      coords
-    }
-  }
-  setCoordinates();
-  setPlayer();
-};
+
 
 // let player place a marker 
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
 function setMarker(xCoord, yCoord) {
+   const setTile = function(xCoord, yCoord) {
+      let tile;
+      tile = xCoord.toString() + "-" + yCoord.toString();
+      console.log(`coords: ${tile}`);
+      function setCoordinates() {
+        let coords = tile.split("-");
+        xCoord = parseInt(coords[0]);
+        yCoord = parseFloat(coords[1]);
+        console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
+        return {
+          coords
+        }
+      }
+      setCoordinates();
+      setPlayer();
+    };
+    
   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   setTile(xCoord, yCoord);
   console.log('add an x');
