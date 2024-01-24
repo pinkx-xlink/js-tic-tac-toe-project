@@ -42,21 +42,21 @@ function setPlayer() {
 }
 
 const setTile = function(xCoord, yCoord) {
-   let tile;
-   tile = xCoord.toString() + "-" + yCoord.toString();
-   console.log(`coords: ${tile}`);
-   function setCoordinates() {
-     let coords = tile.split("-");
-     xCoord = parseInt(coords[0]);
-     yCoord = parseFloat(coords[1]);
-     console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-     return {
+  let tile;
+  tile = xCoord.toString() + "-" + yCoord.toString();
+  console.log(`coords: ${tile}`);
+  function setCoordinates() {
+    let coords = tile.split("-");
+    xCoord = parseInt(coords[0]);
+    yCoord = parseFloat(coords[1]);
+    console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
+    return {
       coords
-     }
-   }
-   setCoordinates();
-   setPlayer();
- };
+    }
+  }
+  setCoordinates();
+  setPlayer();
+};
 
 // let player place a marker 
 const playerOneMarker = 'X';
@@ -65,9 +65,7 @@ let currentMarker = 'X';
 function setMarker(xCoord, yCoord) {
   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   setTile(xCoord, yCoord);
-    //updateGameboard.splice();
-    console.log('add an x');
-  // setCoords code
+  console.log('add an x');
   const rotate = updateGameboard => 
     updateGameboard[0].map(
       (_,y)=>updateGameboard.map(
@@ -76,27 +74,27 @@ function setMarker(xCoord, yCoord) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
-    const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
+  const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
   
-   [[xCoord], [yCoord]].forEach(
-     (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
-   );
+  [[xCoord], [yCoord]].forEach(
+    (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
+  );
   console.log(format(updateGameboard));
   
   let tileStatus;
   const spotTaken = 'Taken spot';
   const spotEmpty= 'Empty spot'; 
   function storeMarker(tile) {
-   if (xCoord != "" && yCoord != "") {
+    if (xCoord != "" && yCoord != "") {
       tileStatus = spotTaken;
       console.log('spot taken');
-   } else {
+    } else {
       tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
-     // tile = currentMarker;
-   }
+      // tile = currentMarker;
+    }
   }
   storeMarker();
   
