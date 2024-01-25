@@ -85,7 +85,13 @@ function setMarker(xCoord, yCoord) {
     (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
   );
   console.log(format(updateGameboard));
-  
+  const appendMarker = function () {
+   const appendMarkerArray = [1, 1, 3];
+   console.log(appendMarkerArray);
+   return appendMarkerArray;
+}
+appendMarker();
+
   let tileStatus;
   const spotTaken = 'Taken spot';
   const spotEmpty= 'Empty spot'; 
@@ -98,12 +104,7 @@ function setMarker(xCoord, yCoord) {
       this.tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
-      const appendMarker = function () {
-         const appendMarkerArray = [1, 1, 3];
-         console.log(appendMarkerArray);
-         return appendMarkerArray;
-      }
-      appendMarker();
+    
       // tile = currentMarker;
     }
   }
