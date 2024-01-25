@@ -97,6 +97,7 @@ function setMarker(xCoord, yCoord) {
       this.tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
+      appendMarker();
       // tile = currentMarker;
     }
   }
