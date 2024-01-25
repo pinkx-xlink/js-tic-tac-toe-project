@@ -86,11 +86,13 @@ function setMarker(xCoord, yCoord) {
   );
   console.log(format(updateGameboard));
   const appendMarker = function () {
-   const appendMarkerArray = [1, 1, 3];
-   console.log(appendMarkerArray);
-   return appendMarkerArray;
-}
-appendMarker();
+      const appendMarkerArray = [];
+      appendMarkerArray.push('w');
+   // append a | for each space that DOESNT have a marker in it already
+      console.log(appendMarkerArray);
+      return appendMarkerArray;
+   }
+   appendMarker();
 
   let tileStatus;
   const spotTaken = 'Taken spot';
