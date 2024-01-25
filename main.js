@@ -57,7 +57,7 @@ function setMarker(xCoord, yCoord) {
         xCoord = parseInt(coords[0]);
         yCoord = parseFloat(coords[1]);
         console.log(`${currentPlayer} placed an ${currentMarker} in coord: ${coords}`);
-        [xCoord, yCoord].push('x')
+        //[xCoord, yCoord].push('x')
         return {
           coords
         }
@@ -91,10 +91,10 @@ function setMarker(xCoord, yCoord) {
   const spotEmpty= 'Empty spot'; 
   function storeMarker(tile) {
     if (xCoord != "" && yCoord != "") {
-      tileStatus = spotTaken;
+      this.tileStatus = spotTaken;
       console.log('spot taken');
     } else {
-      tileStatus = spotTaken;
+      this.tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
       // tile = currentMarker;
