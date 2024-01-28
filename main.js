@@ -1,11 +1,12 @@
 // create a 3 x 3 grid in console.
-const htmlGameboard = document.querySelector('#my-gameboard');
-const htmlTiles = document.createElement('div');
-htmlTiles.classList.add('div');
-htmlTiles.setAttribute('id', 'my-tiles');
-htmlGameboard.appendChild(htmlTiles);
-
 function Gameboard () {
+
+   const htmlGameboard = document.querySelector('#my-gameboard');
+   const htmlTiles = document.createElement('div');
+   htmlTiles.classList.add('div');
+   htmlTiles.setAttribute('id', 'my-tiles');
+   htmlGameboard.appendChild(htmlTiles);
+
   const rows = 3;
   const columns = 3;
   let marker;
