@@ -1,8 +1,6 @@
 // create a 3 x 3 grid in console.
 function Gameboard () {
-   const newGameboard = document.createElement('div');
-   newGameboard.classList.add('div');
-   newGameboard.setAttribute('id', 'new-gameboard');
+   
   const rows = 3;
   const columns = 3;
   let marker;
