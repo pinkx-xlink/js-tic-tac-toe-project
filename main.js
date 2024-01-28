@@ -78,18 +78,13 @@ function setMarker(xCoord, yCoord) {
     ).map(
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
-  const format = updateGameboard => function (xCoord, yCoord) {
-   updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
-   [[xCoord], [yCoord]].forEach(
-      (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
-    );
-    //console.log(format(updateGameboard));
-    //return format(updateGameboard)
-  }
+  const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
   // set some values of grid
   
-  
-  
+  [[xCoord], [yCoord]].forEach(
+    (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
+  );
+  console.log(format(updateGameboard));
 //   const appendMarker = function () {
 //       const appendMarkerArray = [];
 //       appendMarkerArray.push('w');
