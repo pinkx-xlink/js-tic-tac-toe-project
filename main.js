@@ -1,4 +1,10 @@
 // create a 3 x 3 grid in console.
+const htmlGameboard = document.querySelector('#my-gameboard');
+const htmlTiles = document.createElement('div');
+htmlTiles.classList.add('div');
+htmlTiles.setAttribute('id', 'my-tiles');
+htmlGameboard.appendChild(htmlTiles);
+
 function Gameboard () {
   const rows = 3;
   const columns = 3;
@@ -14,13 +20,6 @@ function Gameboard () {
     );
   const format = gameboard => gameboard.map(x=>x.join(" ")).join("\n");
   console.log(format(gameboard));
-
-  const htmlGameboard = document.querySelector('my-gameboard');
-  const htmlTiles = document.createElement('div');
-  htmlTiles.classList.add(div);
-  htmlTiles.setAttribute('id', 'my-tiles');
-  htmlGameboard.appendChild(htmlTiles);
-
 }
 window.onload = function () {
   Gameboard();
