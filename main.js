@@ -85,14 +85,14 @@ function setMarker(xCoord, yCoord) {
     (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
   );
   console.log(format(updateGameboard));
-  const appendMarker = function () {
-      const appendMarkerArray = [];
-      appendMarkerArray.push('w');
-   // append a | for each space that DOESNT have a marker in it already
-      console.log(appendMarkerArray);
-      return appendMarkerArray;
-   }
-   appendMarker();
+//   const appendMarker = function () {
+//       const appendMarkerArray = [];
+//       appendMarkerArray.push('w');
+//    // append a | for each space that DOESNT have a marker in it
+//       console.log(appendMarkerArray);
+//       return appendMarkerArray;
+//    }
+//    appendMarker();
 
   let tileStatus;
   const spotTaken = 'Taken spot';
