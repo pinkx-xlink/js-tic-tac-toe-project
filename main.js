@@ -10,7 +10,6 @@ function Gameboard () {
       let htmlTiles = 0;
       for(let i = 0; i < 9; i++){
          if (i < 9) {
-            i++;
             htmlGameboard.innerHTML += `<div>hi</div>`;
             console.log('counting tiles...')
          } else {
