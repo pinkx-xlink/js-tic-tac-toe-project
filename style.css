@@ -5,4 +5,6 @@
 }
 #my-tiles {
     border: 5px solid red;
+    width: 100px;
+    height: 100px;
 }
