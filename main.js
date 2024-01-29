@@ -11,12 +11,12 @@ function populateGameboard() {
   }
 }
 function placeMyMarker() {
-   // let currentTile = document.querySelector('button'); this line only changes inner HTML of the first el
-   let currentTile = this.htmlTiles;
-   currentTile.classList.add('button');
-   currentTile.setAttribute('id', 'current-tile');
-   htmlTiles.appendChild(currentTile);
-   this.currentTile.innerHTML = `<p>beep</p>`;
+   let currentTile = document.querySelector('button'); // this line only changes inner HTML of the first el
+  //  let currentTile = document.querySelectorAll('#my-tiles');
+  //  currentTile.classList.add('button');
+  //  currentTile.setAttribute('id', 'current-tile');
+  //  htmlTiles.appendChild(currentTile);
+   currentTile.innerHTML = `<p>beep</p>`;
    console.log('you clicked a tile.');
 }
 const htmlGameboard = document.querySelector('#my-gameboard');
