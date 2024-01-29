@@ -14,3 +14,6 @@ I've figured out how to manually splice in a marker to replace an empty slot on 
 Today I created a factory function (setMarker()) that takes an x and y variable and places markers on the grid in the console. This code is bugged and instead of placing one marker on a coordinate, it places 2 markers: one for x and one for y. I'll resolve this issue tomorrow, but managing to append a marker to the grid in console using a factory function was my main goal so I'm happy with the baby steps taken today. 
 I also created the setPlayer() function, which makes sure the players alternate turns after each marker is placed. Tomorrow I'll modify the function to also switch the marker on each turn instead of just logging "Marker: X" or "Marker: O" each time the function runs. 
 ~1 hr
+
+1/28/24
+Began implementing the HTML side of the game. ~ 2hrs
