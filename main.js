@@ -7,10 +7,10 @@ function Gameboard () {
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
    function populateGameboard() {
-      let htmlTiles = 0;
-      for(let i = 0; i < 9; i++){
+      htmlTiles = 0;
+      for(let i = 0; i < 8; i++){
          if (i < 9) {
-            htmlGameboard.innerHTML += `<div>hi</div>`;
+            htmlGameboard.innerHTML += `<div id ="my-tiles">hi</div>`;
             console.log('counting tiles...')
          } else {
             console.log('done');

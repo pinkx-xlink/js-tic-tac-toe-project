@@ -3,9 +3,10 @@
     height: 500px; 
     width: 500px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 #my-tiles {
     border: 5px solid red;
-    width: 100px;
-    height: 100px;
+    width: 95%;
+    height: 95%;
 }
