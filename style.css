@@ -6,7 +6,10 @@
     grid-template-columns: repeat(3, 1fr);
 }
 #my-tiles {
-    border: 5px solid red;
-    width: 95%;
-    height: 95%;
+    border: 3px solid rgba(255, 0, 0, 0.151);
+    width: 100%;
+    height: 100%;
+}
+#my-tiles:hover {
+    background-color: pink;
 }
