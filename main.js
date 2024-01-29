@@ -2,7 +2,7 @@ function populateGameboard() {
   htmlTiles = 0;
   for(let i = 0; i < 8; i++){
      if (i < 9) {
-        htmlGameboard.innerHTML += `<button id ="my-tiles" onclick="placeMyMarker()"></div>`;
+        htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
         console.log('counting tiles...');
      } else {
         console.log('done');
@@ -11,17 +11,19 @@ function populateGameboard() {
   }
 }
 function placeMyMarker() {
-   let currentTile = document.querySelector('button');
-   currentTile.innerHTML = `<p>beep</p>`;
+   // let currentTile = document.querySelector('button'); this line only changes inner HTML of the first el
+   let currentTile = this.htmlTiles;
+   currentTile.classList.add('button');
+   currentTile.setAttribute('id', 'current-tile');
+   htmlTiles.appendChild(currentTile);
+   this.currentTile.innerHTML = `<p>beep</p>`;
    console.log('you clicked a tile.');
-};
+}
 const htmlGameboard = document.querySelector('#my-gameboard');
 let htmlTiles = document.createElement('button');
 htmlTiles.classList.add('button');
 htmlTiles.setAttribute('id', 'my-tiles');
 htmlGameboard.appendChild(htmlTiles);
-   
-
 
 // create a 3 x 3 grid in console.
 function Gameboard () { 
