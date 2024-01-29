@@ -2,10 +2,21 @@
 function Gameboard () {
 
    const htmlGameboard = document.querySelector('#my-gameboard');
-   const htmlTiles = document.createElement('div');
+   let htmlTiles = document.createElement('div');
    htmlTiles.classList.add('div');
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
+   for(i = 0; i < 9; i++){
+      htmlTiles = 0
+      if(i < 9) {
+         i++;
+         htmlTiles++;
+
+      } else {
+         console.log('done');
+         return
+      }
+   }
 
   const rows = 3;
   const columns = 3;
