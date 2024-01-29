@@ -1,5 +1,5 @@
 function placeMyMarker() {
-   this.innerHTML= "beep";
+   this.innerHTML = `<p>beep</p>`;
    console.log('you clicked a tile.');
 };
 // create a 3 x 3 grid in console.
@@ -16,7 +16,7 @@ function Gameboard () {
       htmlTiles = 0;
       for(let i = 0; i < 8; i++){
          if (i < 9) {
-            htmlGameboard.innerHTML += `<button id ="my-tiles", onclick="placeMyMarker()">hi</div>`;
+            htmlGameboard.innerHTML += `<button id ="my-tiles", onclick="placeMyMarker()"></div>`;
             console.log('counting tiles...');
          } else {
             console.log('done');
