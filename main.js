@@ -1,5 +1,5 @@
 function placeMyMarker() {
-   const currentTile = document.querySelector('#my-tiles');
+   let currentTile = document.querySelector('button');
    currentTile.innerHTML = `<p>beep</p>`;
    console.log('you clicked a tile.');
 };
