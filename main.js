@@ -7,7 +7,7 @@ function Gameboard () {
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
    function populateGameboard() {
-      for(i = 0; i < 9; i++){
+      for(let i = 0; i < 9; i++){
          htmlTiles = 0
          if(i < 9) {
             i++;
