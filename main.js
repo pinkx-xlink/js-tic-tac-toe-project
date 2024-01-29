@@ -1,3 +1,7 @@
+function placeMyMarker() {
+   this.innerHTML= "beep";
+   console.log('you clicked a tile.');
+};
 // create a 3 x 3 grid in console.
 function Gameboard () {
 
@@ -6,21 +10,21 @@ function Gameboard () {
    htmlTiles.classList.add('button');
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
+   
+ 
    function populateGameboard() {
       htmlTiles = 0;
       for(let i = 0; i < 8; i++){
          if (i < 9) {
-            htmlGameboard.innerHTML += `<button id ="my-tiles">hi</div>`;
-            console.log('counting tiles...')
+            htmlGameboard.innerHTML += `<button id ="my-tiles", onclick="placeMyMarker()">hi</div>`;
+            console.log('counting tiles...');
          } else {
             console.log('done');
-            return
+            return;
          }
       }
    }
    populateGameboard();
-   
-
   const rows = 3;
   const columns = 3;
   let marker;
@@ -64,6 +68,7 @@ function setPlayer() {
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
+
 function setMarker(xCoord, yCoord) {
    const setTile = function(xCoord, yCoord) {
       let tile;
