@@ -10,6 +10,11 @@ function populateGameboard() {
      }
   }
 }
+// change the grid to an array, 
+// each quare being one object, 
+// similar to my library book project. 
+// then allow each array element to be accessed and
+// add a marker (x or o) to it.
 function placeMyMarker() {
    let currentTile = document.querySelector('button'); // this line only changes inner HTML of the first el
   //  let currentTile = document.querySelectorAll('#my-tiles');
