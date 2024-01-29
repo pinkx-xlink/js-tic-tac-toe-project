@@ -6,17 +6,21 @@ function Gameboard () {
    htmlTiles.classList.add('div');
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
-   for(i = 0; i < 9; i++){
-      htmlTiles = 0
-      if(i < 9) {
-         i++;
-         htmlTiles++;
-
-      } else {
-         console.log('done');
-         return
+   function populateGameboard() {
+      for(i = 0; i < 9; i++){
+         htmlTiles = 0
+         if(i < 9) {
+            i++;
+            htmlTiles++;
+   
+         } else {
+            console.log('done');
+            return
+         }
       }
    }
+   populateGameboard();
+   
 
   const rows = 3;
   const columns = 3;
