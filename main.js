@@ -21,3 +21,4 @@ const htmlGameboard = document.querySelector('#my-gameboard');
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
    
+ 
