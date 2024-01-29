@@ -2,15 +2,15 @@
 function Gameboard () {
 
    const htmlGameboard = document.querySelector('#my-gameboard');
-   let htmlTiles = document.createElement('div');
-   htmlTiles.classList.add('div');
+   let htmlTiles = document.createElement('button');
+   htmlTiles.classList.add('button');
    htmlTiles.setAttribute('id', 'my-tiles');
    htmlGameboard.appendChild(htmlTiles);
    function populateGameboard() {
       htmlTiles = 0;
       for(let i = 0; i < 8; i++){
          if (i < 9) {
-            htmlGameboard.innerHTML += `<div id ="my-tiles">hi</div>`;
+            htmlGameboard.innerHTML += `<button id ="my-tiles">hi</div>`;
             console.log('counting tiles...')
          } else {
             console.log('done');
