@@ -11,6 +11,7 @@ function populateGameboard() {
      }
   }
 }
+
 // change the grid to an array, 
 // each quare being one object, 
 // similar to my library book project. 
@@ -52,6 +53,7 @@ function Gameboard () {
   console.log(format(gameboard));
 }
 window.onload = function () {
+  placeMyMarker();
   Gameboard();
   setPlayer();
 }
