@@ -1,9 +1,10 @@
 function populateGameboard() {
-  htmlTiles = 0;
+  //htmlTiles = 0;
   for(let i = 0; i < 8; i++){
      if (i < 9) {
         htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
         console.log('counting tiles...');
+        
      } else {
         console.log('done');
         return;
@@ -16,7 +17,7 @@ function populateGameboard() {
 // then allow each array element to be accessed and
 // add a marker (x or o) to it.
 function placeMyMarker() {
-   let currentTile = document.querySelector('button'); // this line only changes inner HTML of the first el
+   let currentTile = document.querySelector('#my-tiles'); // this line only changes inner HTML of the first el
   //  let currentTile = document.querySelectorAll('#my-tiles');
   //  currentTile.classList.add('button');
   //  currentTile.setAttribute('id', 'current-tile');
@@ -29,6 +30,7 @@ let htmlTiles = document.createElement('button');
 htmlTiles.classList.add('button');
 htmlTiles.setAttribute('id', 'my-tiles');
 htmlGameboard.appendChild(htmlTiles);
+htmlTiles.addEventListener('click', placeMyMarker);
 
 // create a 3 x 3 grid in console.
 function Gameboard () { 
