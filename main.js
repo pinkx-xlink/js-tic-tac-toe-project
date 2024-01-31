@@ -3,8 +3,12 @@ function populateGameboard() {
   for(let i = 0; i < 8; i++){
      if (i < 9) {
         htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
+        const htmlTiles = document.querySelectorAll('button');
+        // htmlTiles.classList.add('button');
+        // htmlTiles.setAttribute('id', 'my-tiles');
+        // htmlGameboard.appendChild(htmlTiles);
         console.log('counting tiles...');
-        
+
      } else {
         console.log('done');
         return;
@@ -12,13 +16,13 @@ function populateGameboard() {
   }
 }
 
-// change the grid to an array, 
-// each quare being one object, 
-// similar to my library book project. 
+// change the grid to an array,
+// each quare being one object,
+// similar to my library book project.
 // then allow each array element to be accessed and
 // add a marker (x or o) to it.
 function placeMyMarker() {
-   let currentTile = document.querySelector('#my-tiles'); // this line only changes inner HTML of the first el
+   const currentTile = document.querySelector('#my-tiles'); // this line only changes inner HTML of the first el
   //  let currentTile = document.querySelectorAll('#my-tiles');
   //  currentTile.classList.add('button');
   //  currentTile.setAttribute('id', 'current-tile');
@@ -27,21 +31,18 @@ function placeMyMarker() {
    console.log('you clicked a tile.');
 }
 const htmlGameboard = document.querySelector('#my-gameboard');
-let htmlTiles = document.createElement('button');
-htmlTiles.classList.add('button');
-htmlTiles.setAttribute('id', 'my-tiles');
-htmlGameboard.appendChild(htmlTiles);
-htmlTiles.addEventListener('click', placeMyMarker);
+
+// htmlTiles.addEventListener('click', placeMyMarker);
 
 // create a 3 x 3 grid in console.
-function Gameboard () { 
-   
+function Gameboard () {
+
    populateGameboard();
   const rows = 3;
   const columns = 3;
   let marker;
   const gameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
-  const rotate = gameboard => 
+  const rotate = gameboard =>
     gameboard[0].map(
       (_,y)=>gameboard.map(
         (_,x)=>[y,x]
@@ -53,7 +54,7 @@ function Gameboard () {
   console.log(format(gameboard));
 }
 window.onload = function () {
-  placeMyMarker();
+  //placeMyMarker();
   Gameboard();
   setPlayer();
 }
@@ -77,7 +78,7 @@ function setPlayer() {
 
 
 
-// let player place a marker 
+// let player place a marker
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
@@ -105,7 +106,7 @@ function setMarker(xCoord, yCoord) {
   updateGameboard = Array.from(new Array(3),()=>Array.from(new Array(3),()=>"|"));
   setTile(xCoord, yCoord);
   console.log('add an x');
-  const rotate = updateGameboard => 
+  const rotate = updateGameboard =>
     updateGameboard[0].map(
       (_,y)=>updateGameboard.map(
         (_,x)=>[y,x]
@@ -114,9 +115,9 @@ function setMarker(xCoord, yCoord) {
       row=>row.map(([x,y])=>updateGameboard[y][x])
     );
   const format = updateGameboard => updateGameboard.splice(updateGameboard=>updateGameboard.join(" ")).join("\n");
-  
+
   // set some values of grid
-  
+
   [[xCoord], [yCoord]].forEach(
     (tile)=>updateGameboard[xCoord][yCoord]=currentMarker
   );
@@ -132,22 +133,22 @@ function setMarker(xCoord, yCoord) {
 
   let tileStatus;
   const spotTaken = 'Taken spot';
-  const spotEmpty= 'Empty spot'; 
+  const spotEmpty= 'Empty spot';
   function storeMarker(tile) {
     if (xCoord != "" && yCoord != "") {
       this.tileStatus = spotTaken;
       console.log('spot taken');
-      
+
     } else {
       this.tileStatus = spotTaken;
       console.log('spot not taken');
       updateGameboard.push(tile);
-    
+
       // tile = currentMarker;
     }
   }
   storeMarker();
-  
+
   return format(updateGameboard);
 }
 // call in the console with setMarker(0, 0)
@@ -156,7 +157,7 @@ function setMarker(xCoord, yCoord) {
 // when a player choses a spot, push X/O and
 // replace the grid coords with X/O.
 
-// create function to check for winner 
+// create function to check for winner
 // horizontally, vertically, & (anti) diagonally.
 
 // when someone wins, gameover & clear gameboard
