@@ -10,9 +10,7 @@ function populateGameboard() {
         // htmlTiles.setAttribute('id', 'my-tiles');
         // htmlGameboard.appendChild(htmlTiles);
         console.log('counting tiles...');
-     } else {
-        console.log('done');
-     }
+     } 
   }
 }
 let currentTile = document.querySelector('#my-tiles');
