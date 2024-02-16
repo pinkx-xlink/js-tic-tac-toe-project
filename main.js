@@ -3,13 +3,12 @@ function populateGameboard() {
   for(let i = 0; i < 9; i++){
      if (i < 9) {
         htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
-        const tiles = document.querySelectorAll('button');
-        
+        let tiles = document.querySelectorAll('button');
+        htmlGameboard.addEventListener("click", placeMyMarker)
         //let currentTile = document.querySelector('#my-tiles');
         // htmlTiles.classList.add('button');
         // htmlTiles.setAttribute('id', 'my-tiles');
         // htmlGameboard.appendChild(htmlTiles);
-        console.log('counting tiles...');
      } 
   }
 }
@@ -25,7 +24,10 @@ function placeMyMarker() {
   //  currentTile.classList.add('button');
   //  currentTile.setAttribute('id', 'current-tile');
   //  htmlTiles.appendChild(currentTile);
-   // .innerHTML = `<p>beep</p>`;
+
+   // let currentTile = document.getElementById("my-tiles");
+   // currentTile.style.color = "blue";
+   
    console.log('you clicked a tile.');
 }
 const htmlGameboard = document.querySelector('#my-gameboard');
