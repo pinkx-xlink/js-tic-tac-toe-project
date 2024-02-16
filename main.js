@@ -2,7 +2,7 @@ function populateGameboard() {
   //htmlTiles = 0;
   for(let i = 0; i < 9; i++){
      if (i < 9) {
-        htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
+        htmlGameboard.innerHTML += `<button id="my-tiles"></div>`;
         const htmlTiles = document.querySelectorAll('button');
         
         //let currentTile = document.querySelector('#my-tiles');
