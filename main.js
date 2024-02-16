@@ -3,7 +3,7 @@ function populateGameboard() {
   for(let i = 0; i < 9; i++){
      if (i < 9) {
         htmlGameboard.innerHTML += `<button id="my-tiles" onclick="placeMyMarker()"></div>`;
-        const htmlTiles = document.querySelectorAll('button');
+        const tiles = document.querySelectorAll('button');
         
         //let currentTile = document.querySelector('#my-tiles');
         // htmlTiles.classList.add('button');
