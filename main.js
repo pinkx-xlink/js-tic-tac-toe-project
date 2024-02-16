@@ -13,7 +13,6 @@ function populateGameboard() {
      } 
   }
 }
-let currentTile = document.querySelector('#my-tiles');
 
 // change the grid to an array, 
 // each quare being one object,
@@ -26,7 +25,7 @@ function placeMyMarker() {
   //  currentTile.classList.add('button');
   //  currentTile.setAttribute('id', 'current-tile');
   //  htmlTiles.appendChild(currentTile);
-   this.innerHTML += `<p>beep</p>`;
+   // .innerHTML = `<p>beep</p>`;
    console.log('you clicked a tile.');
 }
 const htmlGameboard = document.querySelector('#my-gameboard');
