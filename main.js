@@ -16,7 +16,11 @@ function placeMyMarker(cells) {
 const playerOne = 'Player 1';
 const playerTwo = 'Player 2';
 let currentPlayer = playerOne;
-
+const playerText = document.querySelector('.player');
+function displayPlayer() {
+  playerText.textContent = `It's ${currentPlayer}'s turn`;
+}
+displayPlayer();
 // alternate player turns.
 function setPlayer() {
   if (currentPlayer == playerOne) {
