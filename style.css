@@ -10,7 +10,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.cells {
+#my-tiles {
     border: 3px solid rgba(255, 0, 0, 0.151);
     width: 100%;
     height: 100%;

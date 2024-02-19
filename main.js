@@ -16,4 +16,4 @@ function placeMyMarker() {
 const htmlGameboard = document.querySelector('#my-gameboard');
 // /htmlGameboard.addEventListener('click', placeMyMarker);
 // htmlTiles.addEventListener('click', placeMyMarker);
-populateGameboard();
+
