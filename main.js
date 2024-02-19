@@ -56,6 +56,10 @@ function placeMyMarker(cells) {
 function winner() {
   for(let i = 0; i < winningCombos.length; i++) {
     const combo = winningCombos[i];
+    const cellA = options[combo[0]];
+    const cellB = options[combo[1]];
+    const cellC = options[combo[2]];
+
     
   }
 }
