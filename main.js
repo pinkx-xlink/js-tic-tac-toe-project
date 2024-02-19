@@ -60,6 +60,13 @@ function winner() {
     const cellB = options[combo[1]];
     const cellC = options[combo[2]];
 
-    
+    if(cellA == "" || cellB == "" || cellC == "") {
+      continue;
+    }
+    else if(cellA == cellB && cellB == cellC){
+      console.log('WINNER!');
+      break;
+    }
   }
-}
+};
+winner();
