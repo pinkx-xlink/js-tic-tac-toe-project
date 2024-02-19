@@ -65,9 +65,16 @@ function winner() {
 };
 
 function placeMyMarker(cells) {
+  const cellIndex = this.getAttribute("cellIndex");
+  updateCell(this, cellIndex);
+
   console.log('you clicked a tile.');
   this.textContent = `${currentMarker}`;
   setPlayer();
   winner();
 }
 
+function updateCell(cell, index){
+  combos[index] = currentPlayer;
+  cells.textContent = currentPlayer;
+}
