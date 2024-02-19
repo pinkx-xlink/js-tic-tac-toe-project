@@ -47,6 +47,7 @@ const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
 
+
 function winner() {
   for(let i = 0; i < winningCombos.length; i++) {
     const combo = winningCombos[i];
@@ -75,6 +76,6 @@ function placeMyMarker(cells) {
 }
 
 function updateCell(cell, index){
-  combos[index] = currentPlayer;
+  combo[index] = currentPlayer;
   cells.textContent = currentPlayer;
 }
