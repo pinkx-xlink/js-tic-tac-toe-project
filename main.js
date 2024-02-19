@@ -6,6 +6,7 @@ function populateGameboard() {
 }
 populateGameboard();
 
-function placeMyMarker() {
+function placeMyMarker(cells) {
   console.log('you clicked a tile.');
+  this.textContent = "x";
 }
