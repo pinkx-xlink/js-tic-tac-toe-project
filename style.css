@@ -12,7 +12,7 @@ body {
     background-color: rgba(165, 42, 42, 0.308);
 }
 .cell {
-    text-align: center;
+    text-align:center;
     border: 3px solid rgba(255, 0, 0, 0.151);
     height: 150px;
     width: 150px;
