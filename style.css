@@ -13,11 +13,12 @@ body {
 }
 .cell {
     text-align:center;
-    border: 3px solid rgba(255, 0, 0, 0.151);
+    border: 5px solid rgba(255, 0, 0, 0.151);
     height: 150px;
     width: 150px;
     font-size: 50px;
     font-family: "arial";
+    margin: 3px;
 }
 .cell:hover {
     background-color: pink;
