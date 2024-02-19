@@ -82,5 +82,6 @@ function winner() {
 const restartBtn = document.querySelector("#restart");
 restartBtn.addEventListener("click", restartGame);
 function restartGame() {
+  cells.forEach(cells => cells.textContent = "");
   console.log('new game');
 }
