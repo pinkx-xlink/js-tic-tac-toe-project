@@ -52,3 +52,10 @@ function placeMyMarker(cells) {
   this.textContent = `${currentMarker}`;
   setPlayer();
 }
+
+function winner() {
+  for(let i = 0; i < winningCombos.length; i++) {
+    const combo = winningCombos[i];
+    
+  }
+}
