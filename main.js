@@ -46,7 +46,7 @@ function cellClicked() {
   winner();
 }
 function updateCell(cell, index) {
-  combo[index] = currentPlayer;
+  options[index] = currentPlayer;
 }
 
 const playerOneMarker = 'X';
