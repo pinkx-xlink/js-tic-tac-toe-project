@@ -4,16 +4,14 @@ body {
     align-items: center;
 }
 #my-gameboard {
-    
     height: 500px; 
     width: 500px;
-    
 }
-.cells {
+.cell {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 3px solid rgba(255, 0, 0, 0.151);
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
 }
 
