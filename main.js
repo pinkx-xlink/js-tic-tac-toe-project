@@ -47,12 +47,6 @@ const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
 
-function placeMyMarker(cells) {
-  console.log('you clicked a tile.');
-  this.textContent = `${currentMarker}`;
-  setPlayer();
-}
-
 function winner() {
   for(let i = 0; i < winningCombos.length; i++) {
     const combo = winningCombos[i];
@@ -63,10 +57,17 @@ function winner() {
     if(cellA == "" || cellB == "" || cellC == "") {
       continue;
     }
-    else if(cellA == cellB && cellB == cellC){
+    if(cellA == cellB && cellB == cellC){
       console.log('WINNER!');
       break;
     }
   }
 };
-winner();
+
+function placeMyMarker(cells) {
+  console.log('you clicked a tile.');
+  this.textContent = `${currentMarker}`;
+  setPlayer();
+  winner();
+}
+
