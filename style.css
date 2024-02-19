@@ -6,10 +6,11 @@ body {
 #my-gameboard {
     height: 500px; 
     width: 500px;
-}
-.cell {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+.cell {
+    
     border: 3px solid rgba(255, 0, 0, 0.151);
     height: 150px;
     width: 150px;
