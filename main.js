@@ -79,3 +79,8 @@ function winner() {
     }
   }
 };
+const restartBtn = document.querySelector("#restart");
+restartBtn.addEventListener("click", restartGame);
+function restartGame() {
+  console.log('new game');
+}
