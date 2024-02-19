@@ -37,6 +37,6 @@ let currentMarker = 'X';
 
 function placeMyMarker(cells) {
   console.log('you clicked a tile.');
-  this.textContent = "x";
+  this.textContent = `${currentMarker}`;
   setPlayer();
 }
