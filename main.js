@@ -17,6 +17,16 @@ const winningCombos = [
 ];
 let options = ["", "", "", "", "", "", "", "", ""];
 
+function cellClicked() {
+  const cellIndex = this.getAttribute("cellIndex");
+  updateCell(this, cellIndex);
+  winner();
+}
+function updateCell(cell, index) {
+  options[index] = currentPlayer;
+}
+
+
 const playerOne = 'Player 1';
 const playerTwo = 'Player 2';
 let currentPlayer = playerOne;
@@ -39,14 +49,6 @@ function setPlayer() {
     playerText.textContent = `it's player one's turn! marker: X`;
     console.log(`Player One's turn. Marker: X`);
   }
-}
-function cellClicked() {
-  const cellIndex = this.getAttribute("cellIndex");
-  updateCell(this, cellIndex);
-  winner();
-}
-function updateCell(cell, index) {
-  options[index] = currentPlayer;
 }
 
 const playerOneMarker = 'X';
