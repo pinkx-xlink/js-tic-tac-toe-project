@@ -20,7 +20,8 @@ let options = ["", "", "", "", "", "", "", "", ""];
 function cellClicked() {
   const cellIndex = this.getAttribute("cellIndex");
   updateCell(this, cellIndex);
-  placeMyMarker();
+  placeMyMarker(cells);
+  this.textContent = `${currentMarker}`;
   winner();
 }
 function updateCell(cell, index) {
@@ -58,9 +59,8 @@ let currentMarker = 'X';
 
 function placeMyMarker(cells) {
   console.log('you clicked a tile.');
-  this.textContent = `${currentMarker}`;
+  //this.textContent = `${currentMarker}`;
   setPlayer();
-  cellClicked();
 }
 
 function winner() {
