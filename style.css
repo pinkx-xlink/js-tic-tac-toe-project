@@ -16,9 +16,9 @@ body {
     border: 5px solid rgba(255, 0, 0, 0.151);
     height: 150px;
     width: 150px;
-    font-size: 50px;
+    font-size: 80px;
     font-family: "arial";
-    margin: 3px;
+    padding:3.5px;
 }
 .cell:hover {
     background-color: pink;
