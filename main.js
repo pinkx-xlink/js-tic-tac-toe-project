@@ -1,7 +1,7 @@
 const htmlGameboard = document.querySelector('#my-gameboard');
 const cells = document.querySelectorAll('.cell');
 function populateGameboard() {
-  cells.forEach(cells => cells.addEventListener("click", placeMyMarker));
+  cells.forEach(cells => cells.addEventListener("click", cellClicked));
 }
 populateGameboard();
 
@@ -20,6 +20,7 @@ let options = ["", "", "", "", "", "", "", "", ""];
 function cellClicked() {
   const cellIndex = this.getAttribute("cellIndex");
   updateCell(this, cellIndex);
+  placeMyMarker();
   winner();
 }
 function updateCell(cell, index) {
