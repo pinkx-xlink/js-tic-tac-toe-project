@@ -40,20 +40,23 @@ function setPlayer() {
     console.log(`Player One's turn. Marker: X`);
   }
 }
+function cellClicked() {
+  const cellIndex = this.getAttribute("cellIndex");
+  updateCell(this, cellIndex) {
+    winner();
+  }
+}
 
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
 
 function placeMyMarker(cells) {
-  const cellIndex = this.getAttribute("cellIndex");
-
   console.log('you clicked a tile.');
   this.textContent = `${currentMarker}`;
   setPlayer();
   winner();
 }
-
 
 function winner() {
   for(let i = 0; i < winningCombos.length; i++) {
