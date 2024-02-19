@@ -25,9 +25,7 @@ function placeMyMarker() {
   //  currentTile.setAttribute('id', 'current-tile');
   //  htmlTiles.appendChild(currentTile);
 
-   // let currentTile = document.getElementById("my-tiles");
-   // currentTile.style.color = "blue";
-   
+   const currentTile = this.tiles;
    console.log('you clicked a tile.');
 }
 const htmlGameboard = document.querySelector('#my-gameboard');
