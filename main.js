@@ -9,7 +9,6 @@ function placeMyMarker() {
   //  currentTile.classList.add('button');
   //  currentTile.setAttribute('id', 'current-tile');
   //  htmlTiles.appendChild(currentTile);
-
    const currentTile = this.tiles;
    console.log('you clicked a tile.');
 }
@@ -17,3 +16,4 @@ const htmlGameboard = document.querySelector('#my-gameboard');
 // /htmlGameboard.addEventListener('click', placeMyMarker);
 // htmlTiles.addEventListener('click', placeMyMarker);
 
+const cell = document.querySelectorAll(".cell");
