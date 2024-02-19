@@ -1,7 +1,5 @@
-
 const htmlGameboard = document.querySelector('#my-gameboard');
 const cells = document.querySelectorAll('.cell');
-
 function populateGameboard() {
   cells.forEach(cells => cells.addEventListener("click", placeMyMarker));
 }
@@ -19,7 +17,6 @@ const winningCombos = [
 ];
 let options = ["", "", "", "", "", "", "", "", ""];
 
-// create player1 and player 2.
 const playerOne = 'Player 1';
 const playerTwo = 'Player 2';
 let currentPlayer = playerOne;
@@ -28,6 +25,7 @@ function displayPlayer() {
   playerText.textContent = `It's ${currentPlayer}'s turn`;
 }
 displayPlayer();
+
 // alternate player turns.
 function setPlayer() {
   if (currentPlayer == playerOne) {
@@ -42,11 +40,10 @@ function setPlayer() {
     console.log(`Player One's turn. Marker: X`);
   }
 }
-// let player place a marker 
+
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
-
 
 function winner() {
   for(let i = 0; i < winningCombos.length; i++) {
