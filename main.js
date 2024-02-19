@@ -42,9 +42,11 @@ function setPlayer() {
 }
 function cellClicked() {
   const cellIndex = this.getAttribute("cellIndex");
-  updateCell(this, cellIndex) {
+  updateCell(this, cellIndex);
     winner();
-  }
+}
+function updateCell(cell, index) {
+  combo[index] = currentPlayer;
 }
 
 const playerOneMarker = 'X';
@@ -55,6 +57,7 @@ function placeMyMarker(cells) {
   console.log('you clicked a tile.');
   this.textContent = `${currentMarker}`;
   setPlayer();
+  cellClicked();
   winner();
 }
 
