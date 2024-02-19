@@ -1,8 +1,11 @@
 const htmlGameboard = document.querySelector('#my-gameboard');
-let cell = document.querySelectorAll(".cell");
+const cells = document.querySelectorAll('.cell');
 
-cell.forEach(addEventListener("click", placeMyMarker));
-function placeMyMarker(cell) {
+function populateGameboard() {
+  cells.forEach(cells => cells.addEventListener("click", placeMyMarker));
+}
+populateGameboard();
+
+function placeMyMarker() {
   console.log('you clicked a tile.');
-  this.innerHTML = 'x';
 }
