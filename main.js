@@ -7,11 +7,6 @@ function populateGameboard() {
 }
 populateGameboard();
 
-function placeMyMarker(cells) {
-  console.log('you clicked a tile.');
-  this.textContent = "x";
-}
-
 // create player1 and player 2.
 const playerOne = 'Player 1';
 const playerTwo = 'Player 2';
@@ -25,11 +20,13 @@ displayPlayer();
 function setPlayer() {
   if (currentPlayer == playerOne) {
     currentPlayer = playerTwo;
-    currentMarker = playerTwoMarker
+    currentMarker = playerTwoMarker;
+    playerText.textContent = `it's player two's turn now. Marker: O`
     console.log('Player Twos turn. Marker: O');
   } else if (currentPlayer == playerTwo) {
     currentPlayer = playerOne;
     currentMarker = playerOneMarker;
+    playerText.textContent = `it's player one's turn! marker: X`;
     console.log(`Player One's turn. Marker: X`);
   }
 }
@@ -37,3 +34,9 @@ function setPlayer() {
 const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
+
+function placeMyMarker(cells) {
+  console.log('you clicked a tile.');
+  this.textContent = "x";
+  setPlayer();
+}
