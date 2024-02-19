@@ -43,7 +43,7 @@ function setPlayer() {
 function cellClicked() {
   const cellIndex = this.getAttribute("cellIndex");
   updateCell(this, cellIndex);
-    winner();
+  winner();
 }
 function updateCell(cell, index) {
   combo[index] = currentPlayer;
@@ -58,7 +58,6 @@ function placeMyMarker(cells) {
   this.textContent = `${currentMarker}`;
   setPlayer();
   cellClicked();
-  winner();
 }
 
 function winner() {
