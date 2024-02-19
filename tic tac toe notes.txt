@@ -303,6 +303,13 @@ function setMarker(xCoord, yCoord) {
 
 
 
+- try making the gameboard an html container with 9 html div elements
+	a. may be able to render without creating 9 elements using grid template to generate 3 rows and 3 columns
+	b. access individual element using js
+- use a foreach loop with a callback when a tile is clicked! (addEventListener("click", function())
+	a. in the call back function, call this. and use a getter/setter
+
+
 
 
 
