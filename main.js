@@ -1,3 +1,5 @@
+const header = document.querySelector('h1');
+
 const htmlGameboard = document.querySelector('#my-gameboard');
 const cells = document.querySelectorAll('.cell');
 function populateGameboard() {
@@ -85,6 +87,6 @@ function restartGame() {
   cells.forEach(cells => cells.textContent = "");
   console.log('new game');
   const restartText = document.createElement('p');
-  htmlGameboard.appendChild(restartText);
+  header.appendChild(restartText);
   restartText.innerHTML = 'New Game';
 }
