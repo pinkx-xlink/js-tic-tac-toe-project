@@ -77,6 +77,7 @@ function winner() {
     }
     if(cellA == cellB && cellB == cellC){
       console.log('WINNER!');
+      header.innerHTML = `${currentPlayer} wins!`;
       break;
     }
   }

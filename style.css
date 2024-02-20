@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 148, 0.288);
 }
 #my-gameboard {
     height: 500px; 
