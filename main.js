@@ -86,7 +86,8 @@ restartBtn.addEventListener("click", restartGame);
 function restartGame() {
   cells.forEach(cells => cells.textContent = "");
   console.log('new game');
+
   const restartText = document.createElement('p');
   header.appendChild(restartText);
   restartText.innerHTML = 'New Game';
-}
+  }
