@@ -11,7 +11,35 @@ body {
     font-family: "Gloria Hallelujah", cursive;
     background-image: url('./img/heart.webp');
     background-size: 100px;
+    position: relative;
+  
+    
+    overflow: hidden;
 }
+
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background-image: url('./img/heart.webp'); /* Replace with your image URL */
+    background-size: 100px;
+    background-repeat: no-repeat;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: scaleX(-1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
 .gloria-hallelujah-regular {
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 400;
