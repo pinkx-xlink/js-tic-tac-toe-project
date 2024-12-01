@@ -17,3 +17,5 @@ I also created the setPlayer() function, which makes sure the players alternate 
 
 1/28/24
 Began implementing the HTML side of the game. ~ 2hrs
+
+Heart background image web link: https://static.vecteezy.com/system/resources/previews/016/589/188/original/heart-8bit-pixel-png.png
