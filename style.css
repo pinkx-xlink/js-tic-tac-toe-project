@@ -56,9 +56,10 @@ body::before {
     display: grid;
     color: white;
     grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-    background-color: rgba(165, 42, 42, 0.849);
-    border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(165, 42, 42, 0.925);
+    border-radius: 25px;
+    box-shadow: 10px 2px 2px 3px maroon;
 }
 .cell {
     display: flex;
@@ -72,6 +73,7 @@ body::before {
     font-family: "arial";
     padding:3.5px;
    border-radius: 15px;
+   box-shadow: -2px 4px 2px 3px maroon;
 }
 .cell:hover {
     background-color: pink;
