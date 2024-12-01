@@ -76,3 +76,10 @@ body::before {
 .cell:hover {
     background-color: pink;
 }
+#restart {
+    background-image: radial-gradient(pink, red);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 80px;
+}
