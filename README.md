@@ -1,6 +1,10 @@
 # js-tic-tac-toe-project
 The application I built for The Odin Project: Tic Tac Toe Project
 
+
+![A screenshot of a red-and-pink tic-tac-toe gameboard with a background of hearts](./img/tic-tac-toe-screenshot.png "Tic-tac-toe project screenshot")
+
+
 1/21/24
 I created the files for this project a few days ago, but since then I took a step back to think about the project before tackling it. 
 The goal is to build a Tic Tac Toe game that works 100% in the console, and then transfer it over to HTML. The console first, HTML later is to help ensure that my code has an undeiably solid foundation. 
