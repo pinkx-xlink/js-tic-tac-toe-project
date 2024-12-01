@@ -12,6 +12,7 @@ body {
   }
   
 #my-gameboard {
+    
     height: 500px; 
     width: 500px;
     display: grid;
@@ -20,6 +21,9 @@ body {
     background-color: rgba(165, 42, 42, 0.308);
 }
 .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align:center;
     border: 5px solid rgba(255, 0, 0, 0.151);
     height: 150px;

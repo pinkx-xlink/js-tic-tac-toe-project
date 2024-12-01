@@ -59,6 +59,7 @@ const playerOneMarker = 'X';
 const playerTwoMarker = 'O';
 let currentMarker = 'X';
 
+
 function placeMyMarker(cells) {
   console.log('you clicked a tile.');
   //this.textContent = `${currentMarker}`;
